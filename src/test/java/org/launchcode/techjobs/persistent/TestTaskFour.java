@@ -1,7 +1,6 @@
 package org.launchcode.techjobs.persistent;
 
 import mockit.Expectations;
-import mockit.Mock;
 import mockit.Mocked;
 import org.junit.jupiter.api.Test;
 import org.launchcode.techjobs.persistent.controllers.HomeController;
@@ -185,7 +184,7 @@ public class TestTaskFour extends AbstractTest {
             skillRepositoryField = listControllerClass.getDeclaredField("skillRepository");
         } catch (NoSuchFieldException e) {
             fail("ListController must have a skillRepository field");
-        }
+
         }
 
         assertEquals(SkillRepository.class, skillRepositoryField.getType());

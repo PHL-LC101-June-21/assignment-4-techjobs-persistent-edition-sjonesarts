@@ -4,6 +4,7 @@ import mockit.Expectations;
 import mockit.Mocked;
 import org.junit.jupiter.api.Test;
 import org.launchcode.techjobs.persistent.controllers.EmployerController;
+import org.launchcode.techjobs.persistent.controllers.SkillController;
 import org.launchcode.techjobs.persistent.models.Employer;
 import org.launchcode.techjobs.persistent.models.Skill;
 import org.launchcode.techjobs.persistent.models.data.EmployerRepository;
@@ -342,7 +343,7 @@ public class TestTaskTwo extends AbstractTest {
         } catch (NoSuchFieldException e) {
             fail("EmployerController does not have an employerRepository field");
         }
-        }
+
 
         assertEquals(EmployerRepository.class, employerRepositoryField.getType(), "employerRepository must be of type EmployerRepository");
         assertNotNull(employerRepositoryField.getAnnotation(Autowired.class), "employerRepository must have the @Autowired annotation");
